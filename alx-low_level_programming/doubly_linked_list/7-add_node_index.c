@@ -21,7 +21,7 @@ dlistint_t *add_node_index(dlistint_t **head, unsigned int index, int data)
 	if (*head == NULL)
 		return (add_dnodeint(head, data));
 
-	else if (index == 0)
+	if (index == 0)
 		return (add_dnodeint(head, data));
 
 	tp1 = *head;
