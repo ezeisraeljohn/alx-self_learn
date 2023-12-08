@@ -24,12 +24,12 @@ dlistint_t *add_node_index(dlistint_t **head, unsigned int index, int data)
 	if (index == 0)
 		return (add_dnodeint(head, data));
 
-	tp1 = *head;
-
 	count = count_node(head);
 
 	if (index > count)
 		return (NULL);
+
+	tp1 = *head;
 
 	while (i < (index - 1))
 	{
