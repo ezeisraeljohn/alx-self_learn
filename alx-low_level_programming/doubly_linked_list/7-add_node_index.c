@@ -18,10 +18,7 @@ dlistint_t *add_node_index(dlistint_t **head, unsigned int index, int data)
 	if (new_node == NULL)
 		return (NULL); /* Fail to create node */
 
-	if (*head == NULL)
-		return (add_dnodeint(head, data));
-
-	if (index == 0)
+	if ((*head == NULL) || (index == 0))
 		return (add_dnodeint(head, data));
 
 	count = count_node(head);
