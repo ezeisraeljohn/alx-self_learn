@@ -15,16 +15,13 @@ dlistint_t *add_node_index(dlistint_t **head, unsigned int index, int data)
 
 	new_node = malloc(sizeof(dlistint_t));
 
-	if (new_node == NULL)
+	count = count_node(head);
+
+	if ((new_node == NULL) || (index > count))
 		return (NULL); /* Fail to create node */
 
 	if ((*head == NULL) || (index == 0))
 		return (add_dnodeint(head, data));
-
-	count = count_node(head);
-
-	if (index > count)
-		return (NULL);
 
 	tp1 = *head;
 
