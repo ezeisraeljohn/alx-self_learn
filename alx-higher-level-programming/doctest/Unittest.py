@@ -14,10 +14,13 @@ class TestAddNumbers(unittest.TestCase):
     
     """
     def test_number(self):
-        # test if add_number produces 6
+        """ Method that checks for number matching"""
+        # Conduct several test cases for different numbers
         self.assertAlmostEqual(Add_number.add_number(2, 4), 6)
         self.assertAlmostEqual(Add_number.add_number(1, -1), 0)
-        self.assertAlmostEqual(Add_number.add_number(3, 4), 3)
+        self.assertAlmostEqual(Add_number.add_number(3, 4), 7)
     
     def test_type_error(self):
+        """Method for type errors"""
+        # Conduct test cases for type errors
         self.assertRaises(TypeError, Add_number.add_number, "2",4)
